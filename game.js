@@ -45,6 +45,13 @@ $(document).keydown(function()
     
 });
 
+$(document).on("tap",function(){
+    if(level === 0)
+    {
+        nextSequence();
+    }
+});
+
 
 function checkAnswer(currentLevel)
 {
