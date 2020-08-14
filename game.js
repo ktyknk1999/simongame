@@ -68,19 +68,21 @@ function checkAnswer(currentLevel)
     }
     else
     {
+         var gameOverAudio = new Audio("sounds/wrong.mp3");
+        gameOverAudio.play();
+        $("body").addClass("game-over");
+        setTimeout(function(){$("body").removeClass("game-over")},200);
+        
+        $("#level-title").text("Game Over, Press Any Key to Restart");
         startOver();
     }
 }
 
 function startOver()
 {
-        var gameOverAudio = new Audio("sounds/wrong.mp3");
-        gameOverAudio.play();
-        $("body").addClass("game-over");
-        setTimeout(function(){$("body").removeClass("game-over")},200);
-        level = 0;
-        $("#level-title").text("Game Over, Press Any Key to Restart");
+       
         gamePattern=[];
         userClickedPattern =[];
         console.log("fail");
+        level = 0;
 }
