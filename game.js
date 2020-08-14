@@ -45,7 +45,7 @@ $(document).keydown(function()
     
 });
 
-$(document).on("tap",function(){
+$(document).click(function(){
     if(level === 0)
     {
         nextSequence();
